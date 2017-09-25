@@ -25,7 +25,7 @@ end
 post("/lists") do
   name = params.fetch("name")
   @list = List.new({:name => name, :id => nil})
-  list.save()
+  @list.save()
   @lists = List.all()
   erb(:success)
 end
