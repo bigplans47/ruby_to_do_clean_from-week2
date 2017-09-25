@@ -1,6 +1,10 @@
 class Task < ActiveRecord::Base
-  # belongs_to(:list)
+  scope(:not_done, -> do
+    where({:done => false})
+  end)
+
 end
+# belongs_to(:list)
 
 # class Task
 #   attr_reader(:description, :list_id)
