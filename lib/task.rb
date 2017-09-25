@@ -1,4 +1,4 @@
-class Tasks < ActiveRecord::Base
+class Task < ActiveRecord::Base
 end
 
 # class Task

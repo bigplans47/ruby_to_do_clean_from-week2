@@ -1,7 +1,7 @@
 class CreateLists < ActiveRecord::Migration[5.1]
   def change
     create_table(:lists) do |t|
-      t.column(:name, :varchar)
+      t.column(:name, :string)
       t.column(:done, :boolean)
       t.column(:tasks_id, :int)
 
