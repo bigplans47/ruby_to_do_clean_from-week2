@@ -3,6 +3,8 @@ class Task < ActiveRecord::Base
     where({:done => false})
   end)
 
+
+
 end
 # belongs_to(:list)
 

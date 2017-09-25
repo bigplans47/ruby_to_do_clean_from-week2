@@ -2,6 +2,7 @@ require("rspec")
 require("pg")
 require("task")
 require('spec_helper')
+require('pry')
 
 describe(Task) do
 
@@ -11,6 +12,7 @@ describe(Task) do
       not_done_task2 = Task.create({:description => "gonna do it everyday", :done => false})
       not_done_tasks = [not_done_task1, not_done_task2]
       done_task = Task.create({:description => "done task", :done => true})
+      # binding.pry
       expect(Task.not_done()).to(eq(not_done_tasks))
     end
   end
