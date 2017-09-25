@@ -4,3 +4,7 @@
   <a href="/lists">View All Lists</a>
   <a href="/lists/new">Add New List</a>
 </div>
+
+<% @tasks.each() do |task| %>
+    <li><%= task.description %> <a href="/tasks/<%= task.id() %>/edit">Update this task's description</a></li>
+  <% end %>
