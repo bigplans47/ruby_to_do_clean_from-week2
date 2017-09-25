@@ -6,7 +6,7 @@ also_reload('lib/**/*.rb')
 require("pg")
 require('pry')
 
-DB = PG.connect({:dbname => "chore_list_test"})
+DB = PG.connect({:dbname => "to_do_test"})
 
 get("/") do
   erb(:index)
