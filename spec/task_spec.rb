@@ -24,6 +24,16 @@ describe(Task) do
       expect(test_task.list()).to(eq(test_list))
     end
   end
+
+    describe("#downcase_description") do
+      it("converts the name to lowercase") do
+        task = Task.create({:description => "FINAGLE THE BUFFALO"})
+        # task.description.downcase_description
+        # binding.pry
+        expect(task.description()).to(eq("finagle the buffalo"))
+      end
+
+    end
   # describe(".all") do
   #   it("is empty at first") do
   #     expect(Task.all()).to(eq([]))
